@@ -90,12 +90,22 @@ main{max-width:1200px;margin:0 auto;padding:0 var(--pad) 40px}
 .ccards button+button{border-right:0}
 /* 压一层暗部，保证白字在任何照片上都能读 */
 .ccards button::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.34) 0%,rgba(18,16,14,.44) 45%,rgba(18,16,14,.88) 100%)}
-/* 选中态只用一根 1px 红顶线标记，不加粗、不改底色 */
-.ccards button.on::before{content:"";position:absolute;left:0;top:0;width:100%;height:1px;background:var(--red);z-index:2}
+/* 选中态：红框 +「当前」角标；未选中压暗，反馈一眼能分清 */
+.ccards button{transition:filter .25s var(--ease),transform .15s var(--ease)}
+.ccards button:active{transform:scale(.985)}
+.ccards button:not(.on){filter:brightness(.72) saturate(.85)}
+.ccards button:not(.on)::after{background:linear-gradient(180deg,rgba(18,16,14,.5) 0%,rgba(18,16,14,.62) 45%,rgba(18,16,14,.92) 100%)}
+.ccards button.on{box-shadow:inset 0 0 0 2px var(--red)}
+.ccards button.on::before{
+  content:"当前";position:absolute;top:10px;right:10px;z-index:2;
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  background:var(--red);color:#fff;padding:4px 8px;line-height:1;
+}
 .ccards b,.ccards span{position:relative;z-index:1;padding:0 15px;display:block}
 .ccards b{font-family:var(--serif);font-weight:500;font-size:16px;line-height:1.25;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0}
-.ccards button:not(.on) b{color:rgba(255,255,255,.9)}
+.ccards button:not(.on) b{color:rgba(255,255,255,.78)}
 .ccards span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:rgba(255,255,255,.74)}
+.ccards button.on span{color:rgba(255,255,255,.9)}
 
 /* ---------- 分类：去掉 01–05 序号，只留「类别 + 数量」两级 ---------- */
 .cats{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--line-2)}
