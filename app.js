@@ -47,20 +47,29 @@ crumb.innerHTML=`/ <a href="#/list/${encodeURIComponent(o.campus)}">${esc(CN(o.c
 const st0=o.recruit_start,dl=o.recruit_deadline,t=today(),past=s=>s&&new Date(s+'T00:00:00')<=t;
 const steps=[['开放报名',st0],['报名截止',dl],['面试 / 结果通知','截止后另行通知']];
 const tl=st0||dl?`<ol class="tl">${steps.map((x,k)=>`<li class="${(k<2&&past(x[1]))?'done':''}"><b>${x[0]}</b><span>${esc(x[1]||'待定')}</span></li>`).join('')}</ol>${on?`<div class="tl-cd">${cd(dl)}</div>`:''}`:'<div class="none">暂无招新计划，可先关注联系方式</div>';
+const photos=o.photos||[];
+const hasVid=!!o.video;
+const gal=photos.length
+  ?`<div class="gal">${photos.map((p,k)=>`<img class="tap" data-k="${k}" src="${esc(p)}" alt="" loading="lazy">`).join('')}${!hasVid?'<div class="ph-card" aria-hidden="true"><span>介绍片 · 待补</span></div>':''}</div><div class="hint">点击图片查看大图</div>`
+  :`<div class="gal ph-gal"><div class="ph-card" aria-hidden="true"><span>封面 · 待补</span></div><div class="ph-card" aria-hidden="true"><span>活动照 · 待补</span></div>${!hasVid?'<div class="ph-card wide" aria-hidden="true"><span>介绍片 · 待补</span></div>':''}</div><div class="hint">示范批素材到位后替换</div>`;
+const cta=on&&(o.apply_url||o.apply_qr);
+const abar=cta
+  ?(o.apply_url?`<a class="btn tap" href="${esc(o.apply_url)}" target="_blank" rel="noopener">去报名</a>`:`<button class="btn tap" id="qb">扫码报名</button>`)
+  :`<p class="abar-note">${on?'报名方式待公布 · 关注立信学生社团管理中心':(o.recruit_status==='未公布'?'招新信息未公布 · 关注立信学生社团管理中心':'暂未招新 · 关注立信学生社团管理中心')}</p>`;
 app.innerHTML=`<div class="dhero">${COV(o,'cover')}<button class="share tap" aria-label="分享">${'<svg viewBox="0 0 24 24" width="18"><path d="M12 3v12M7 8l5-5 5 5M5 14v5h14v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'}</button><div class="dh-in"><div><div class="kicker">${esc(EN[o.category]||'')} · ${esc(o.id.toUpperCase())}</div><h1>${esc(o.name)}</h1><div class="dm">${esc(CN(o.campus))} · ${esc(o.category)}</div></div></div></div>
 <div class="dsum"><span class="tag${on?'':' off'}">${esc(o.recruit_status)}</span>${on?' '+cd(dl):''}${o.summary?`<p>${esc(o.summary)}</p>`:''}</div>
-${(st0||dl||o.photos?.length)?`<div class="tabs" role="tablist"><button class="on" data-t="i">介绍</button>${(st0||dl)?'<button data-t="r">招新</button>':''}${o.photos?.length?`<button data-t="p">相册 ${o.photos.length}</button>`:''}<i class="ink"></i></div>`:''}
-<div class="pane" data-p="i"><div class="sec"><h2>详细介绍</h2>${o.description?esc(o.description):'<span class="ph">简介待补充</span>'}</div>${o.video?`<div class="sec"><h2>介绍视频</h2><video src="${esc(o.video)}" controls playsinline preload="metadata"></video></div>`:''}
+<div class="tabs" role="tablist"><button class="on" data-t="i">介绍</button>${(st0||dl)?'<button data-t="r">招新</button>':''}<button data-t="p">相册${photos.length?` ${photos.length}`:''}</button><i class="ink"></i></div>
+<div class="pane" data-p="i"><div class="sec"><h2>详细介绍</h2>${o.description?esc(o.description):'<span class="ph">简介待补充</span>'}</div>${hasVid?`<div class="sec"><h2>介绍视频</h2><video src="${esc(o.video)}" controls playsinline preload="metadata"></video></div>`:''}
 <div class="sec"><h2>联系方式</h2>${!(o.contact?.wechat||o.contact?.qq)?'<span class="ph">暂无公开联系方式</span>':''}${o.contact?.wechat?`<div class="kv"><span>微信</span><b>${esc(o.contact.wechat)}</b></div>`:''}${o.contact?.qq?`<div class="kv"><span>QQ</span><b>${esc(o.contact.qq)}</b></div>`:''}</div></div>
-${(st0||dl)?'':'<!--'}<div class="pane" data-p="r" hidden><div class="sec"><h2>招新时间线</h2>${tl}</div></div>
-${(st0||dl)?'':'-->'}${o.photos?.length?'':'<!--'}<div class="pane" data-p="p" hidden><div class="sec">${o.photos?.length?`<div class="gal">${o.photos.map((p,k)=>`<img class="tap" data-k="${k}" src="${esc(p)}" alt="" loading="lazy">`).join('')}</div><div class="hint">点击图片查看大图</div>`:'<div class="none">暂无照片</div>'}</div></div>${o.photos?.length?'':'-->'}
-<div class="abar">${!on?`<div class="btn-off" aria-disabled="true">${o.recruit_status==='未公布'?'招新信息未公布':'暂未招新'}</div>`:o.apply_url?`<a class="btn tap" href="${esc(o.apply_url)}" target="_blank" rel="noopener">去报名</a>`:o.apply_qr?`<button class="btn tap" id="qb">扫码报名</button>`:'<div class="btn-off">报名方式待公布</div>'}</div>`;
-document.body.classList.add('has-bar');
+${(st0||dl)?`<div class="pane" data-p="r" hidden><div class="sec"><h2>招新时间线</h2>${tl}</div></div>`:''}
+<div class="pane" data-p="p" hidden><div class="sec">${gal}</div></div>
+<div class="abar${cta?'':' soft'}">${abar}</div>`;
+document.body.classList.add('has-bar');if(!cta)document.body.classList.add('bar-soft');
 const tb=app.querySelectorAll('.tabs button'),ink=app.querySelector('.ink');if(ink&&tb.length){ink.style.width=(100/tb.length)+'%';ink.style.transform='translateX(0)'}tb.forEach((b,k)=>b.onclick=()=>{tb.forEach(x=>x.classList.toggle('on',x===b));ink.style.width=(100/tb.length)+'%';ink.style.transform=`translateX(${k*100}%)`;app.querySelectorAll('.pane').forEach(p=>p.hidden=p.dataset.p!==b.dataset.t)});
 app.querySelectorAll('.gal img').forEach(i=>i.onclick=()=>lightbox(o.photos,+i.dataset.k));
 app.querySelector('.share').onclick=()=>share(o);
 const qb=document.getElementById('qb');if(qb)qb.onclick=()=>sheet(`<h3>扫码报名</h3><img class="qr2" src="${esc(o.apply_qr)}" alt="报名二维码"><p>微信长按或截图识别二维码</p>`)}
 
-function route(){const pv=route.p||0,pn=/^#\/org/.test(location.hash)?2:/^#\/list/.test(location.hash)?1:0;route.p=pn;app.classList.remove('in-f','in-b');void app.offsetWidth;app.classList.add(pn>=pv?'in-f':'in-b');closeSheet();document.body.classList.remove('has-bar');const h=location.hash.replace(/^#\/?/,'').split('/').map(decodeURIComponent);window.scrollTo(0,0);
+function route(){const pv=route.p||0,pn=/^#\/org/.test(location.hash)?2:/^#\/list/.test(location.hash)?1:0;route.p=pn;app.classList.remove('in-f','in-b');void app.offsetWidth;app.classList.add(pn>=pv?'in-f':'in-b');closeSheet();document.body.classList.remove('has-bar','bar-soft');const h=location.hash.replace(/^#\/?/,'').split('/').map(decodeURIComponent);window.scrollTo(0,0);
 if(h[0]==='list'&&h[1]){if(route.c!==h[1]){st.cat='全部';st.q=''}route.c=h[1];list(h[1])}else if(h[0]==='org'&&h[1])detail(h[1]);else home()}
 app.innerHTML=SKEL;fetch('orgs.json').then(r=>r.json()).then(d=>{DB=d;const f=document.getElementById('foot');if(f&&d.source)f.innerHTML=`数据来源：<a href="${esc(d.source.url)}" target="_blank" rel="noopener">${esc(d.source.text)}</a><div class=\"credit\">图片来源：上海立信会计金融学院（官网、新闻网）。维基共享资源图片：<a href=\"https://commons.wikimedia.org/wiki/File:Lixin_main.jpg\" target=\"_blank\" rel=\"noopener\">Lixin_main.jpg</a>，李玮一，<a href=\"https://creativecommons.org/licenses/by-sa/2.5/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 2.5</a>；<a href=\"https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%B5%B7%E7%AB%8B%E4%BF%A1%E4%BC%9A%E8%AE%A1%E9%87%91%E8%9E%8D%E5%AD%A6%E9%99%A2_%E6%9D%BE%E6%B1%9F.jpg\" target=\"_blank\" rel=\"noopener\">上海立信会计金融学院 松江.jpg</a>、<a href=\"https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%B5%B7%E7%AB%8B%E4%BF%A1%E4%BC%9A%E8%AE%A1%E9%87%91%E8%9E%8D%E5%AD%A6%E9%99%A2_%E6%9D%BE%E6%B1%9F2.jpg\" target=\"_blank\" rel=\"noopener\">松江2.jpg</a>，Suginami，<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 4.0</a>。</div>`;addEventListener('hashchange',route);route()}).catch(()=>app.textContent='数据加载失败，请通过 HTTP 访问（不要直接双击打开文件）');
