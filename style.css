@@ -106,3 +106,8 @@ body.has-bar main{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 
 /* 真数据：占位文字与页脚 */
 .ph{color:#a0a6b2}.foot{text-align:center;font-size:12px;color:#8a8f99;padding:20px 16px 90px}.foot a{color:var(--acc);text-decoration:none}
+
+/* mobile fix: 转场 translateX(24px) 撑宽版心导致手机端横向滚动/缩放 */
+html,body{overflow-x:clip;max-width:100%}
+/* 动画结束后不保留 transform，否则 .abar 的 fixed 会相对 main 定位 */
+.in-f,.in-b{animation-fill-mode:backwards}
