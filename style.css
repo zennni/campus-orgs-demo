@@ -101,3 +101,5 @@ body.has-bar main{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 @keyframes fadeup{from{opacity:0;transform:translateY(6px)}}@keyframes fade{from{opacity:0}}@keyframes shim{to{background-position:-150% 0}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media (min-width:700px){.abar .btn,.abar .btn-off{max-width:560px}}
+
+#crumb a{color:var(--c,#2f6bff);text-decoration:none;font-weight:500}
