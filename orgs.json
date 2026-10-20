@@ -1,0 +1,336 @@
+{
+  "campuses": [
+    {
+      "id": "校区A",
+      "name": "校区A",
+      "desc": "示例校区A简介"
+    },
+    {
+      "id": "校区B",
+      "name": "校区B",
+      "desc": "示例校区B简介"
+    }
+  ],
+  "categories": [
+    "学生会",
+    "学生发展中心",
+    "社团",
+    "艺术团",
+    "校队",
+    "其他"
+  ],
+  "orgs": [
+    {
+      "id": "a-1",
+      "campus": "校区A",
+      "category": "学生会",
+      "name": "示例·校区A学生会",
+      "logo": "img/a-1-logo.svg",
+      "cover": "img/a-1-cover.svg",
+      "summary": "这是一个示例学生会，一句话简介占位。",
+      "description": "示例·学生会（校区A）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "招新中",
+      "recruit_start": "2026-09-01",
+      "recruit_deadline": "2026-11-15",
+      "apply_url": "https://example.com/apply",
+      "apply_qr": "",
+      "contact": {
+        "wechat": "demo_a-1",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/a-1-p1.svg",
+        "img/a-1-p2.svg",
+        "img/a-1-p3.svg"
+      ],
+      "pair_id": null
+    },
+    {
+      "id": "a-2",
+      "campus": "校区A",
+      "category": "学生发展中心",
+      "name": "示例·校区A学生发展中心",
+      "logo": "img/a-2-logo.svg",
+      "cover": "img/a-2-cover.svg",
+      "summary": "这是一个示例学生发展中心，一句话简介占位。",
+      "description": "示例·学生发展中心（校区A）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "未招新",
+      "recruit_start": "",
+      "recruit_deadline": "",
+      "apply_url": "",
+      "apply_qr": "img/a-2-qr.svg",
+      "contact": {
+        "wechat": "demo_a-2",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/a-2-p1.svg",
+        "img/a-2-p2.svg",
+        "img/a-2-p3.svg"
+      ],
+      "pair_id": null
+    },
+    {
+      "id": "a-3",
+      "campus": "校区A",
+      "category": "社团",
+      "name": "示例·校区A摄影社",
+      "logo": "img/a-3-logo.svg",
+      "cover": "img/a-3-cover.svg",
+      "summary": "这是一个示例社团，一句话简介占位。",
+      "description": "示例·摄影社（校区A）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "招新中",
+      "recruit_start": "2026-09-01",
+      "recruit_deadline": "2026-11-15",
+      "apply_url": "https://example.com/apply",
+      "apply_qr": "",
+      "contact": {
+        "wechat": "demo_a-3",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/a-3-p1.svg",
+        "img/a-3-p2.svg",
+        "img/a-3-p3.svg"
+      ],
+      "pair_id": "pair-3"
+    },
+    {
+      "id": "a-4",
+      "campus": "校区A",
+      "category": "艺术团",
+      "name": "示例·校区A合唱团",
+      "logo": "img/a-4-logo.svg",
+      "cover": "img/a-4-cover.svg",
+      "summary": "这是一个示例艺术团，一句话简介占位。",
+      "description": "示例·合唱团（校区A）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "未招新",
+      "recruit_start": "",
+      "recruit_deadline": "",
+      "apply_url": "",
+      "apply_qr": "img/a-4-qr.svg",
+      "contact": {
+        "wechat": "demo_a-4",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/a-4-p1.svg",
+        "img/a-4-p2.svg",
+        "img/a-4-p3.svg"
+      ],
+      "pair_id": "pair-4"
+    },
+    {
+      "id": "a-5",
+      "campus": "校区A",
+      "category": "校队",
+      "name": "示例·校区A篮球队",
+      "logo": "img/a-5-logo.svg",
+      "cover": "img/a-5-cover.svg",
+      "summary": "这是一个示例校队，一句话简介占位。",
+      "description": "示例·篮球队（校区A）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "招新中",
+      "recruit_start": "2026-09-01",
+      "recruit_deadline": "2026-11-15",
+      "apply_url": "https://example.com/apply",
+      "apply_qr": "",
+      "contact": {
+        "wechat": "demo_a-5",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/a-5-p1.svg",
+        "img/a-5-p2.svg",
+        "img/a-5-p3.svg"
+      ],
+      "pair_id": "pair-5"
+    },
+    {
+      "id": "a-6",
+      "campus": "校区A",
+      "category": "其他",
+      "name": "示例·校区A志愿者协会",
+      "logo": "img/a-6-logo.svg",
+      "cover": "img/a-6-cover.svg",
+      "summary": "这是一个示例其他，一句话简介占位。",
+      "description": "示例·志愿者协会（校区A）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "未招新",
+      "recruit_start": "",
+      "recruit_deadline": "",
+      "apply_url": "",
+      "apply_qr": "img/a-6-qr.svg",
+      "contact": {
+        "wechat": "demo_a-6",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/a-6-p1.svg",
+        "img/a-6-p2.svg",
+        "img/a-6-p3.svg"
+      ],
+      "pair_id": null
+    },
+    {
+      "id": "b-1",
+      "campus": "校区B",
+      "category": "学生会",
+      "name": "示例·校区B学生会",
+      "logo": "img/b-1-logo.svg",
+      "cover": "img/b-1-cover.svg",
+      "summary": "这是一个示例学生会，一句话简介占位。",
+      "description": "示例·学生会（校区B）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "未招新",
+      "recruit_start": "",
+      "recruit_deadline": "",
+      "apply_url": "https://example.com/apply",
+      "apply_qr": "",
+      "contact": {
+        "wechat": "demo_b-1",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/b-1-p1.svg",
+        "img/b-1-p2.svg",
+        "img/b-1-p3.svg"
+      ],
+      "pair_id": null
+    },
+    {
+      "id": "b-2",
+      "campus": "校区B",
+      "category": "学生发展中心",
+      "name": "示例·校区B学生发展中心",
+      "logo": "img/b-2-logo.svg",
+      "cover": "img/b-2-cover.svg",
+      "summary": "这是一个示例学生发展中心，一句话简介占位。",
+      "description": "示例·学生发展中心（校区B）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "招新中",
+      "recruit_start": "2026-09-01",
+      "recruit_deadline": "2026-11-15",
+      "apply_url": "",
+      "apply_qr": "img/b-2-qr.svg",
+      "contact": {
+        "wechat": "demo_b-2",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/b-2-p1.svg",
+        "img/b-2-p2.svg",
+        "img/b-2-p3.svg"
+      ],
+      "pair_id": null
+    },
+    {
+      "id": "b-3",
+      "campus": "校区B",
+      "category": "社团",
+      "name": "示例·校区B摄影社",
+      "logo": "img/b-3-logo.svg",
+      "cover": "img/b-3-cover.svg",
+      "summary": "这是一个示例社团，一句话简介占位。",
+      "description": "示例·摄影社（校区B）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "未招新",
+      "recruit_start": "",
+      "recruit_deadline": "",
+      "apply_url": "https://example.com/apply",
+      "apply_qr": "",
+      "contact": {
+        "wechat": "demo_b-3",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/b-3-p1.svg",
+        "img/b-3-p2.svg",
+        "img/b-3-p3.svg"
+      ],
+      "pair_id": "pair-3"
+    },
+    {
+      "id": "b-4",
+      "campus": "校区B",
+      "category": "艺术团",
+      "name": "示例·校区B合唱团",
+      "logo": "img/b-4-logo.svg",
+      "cover": "img/b-4-cover.svg",
+      "summary": "这是一个示例艺术团，一句话简介占位。",
+      "description": "示例·合唱团（校区B）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "招新中",
+      "recruit_start": "2026-09-01",
+      "recruit_deadline": "2026-11-15",
+      "apply_url": "",
+      "apply_qr": "img/b-4-qr.svg",
+      "contact": {
+        "wechat": "demo_b-4",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/b-4-p1.svg",
+        "img/b-4-p2.svg",
+        "img/b-4-p3.svg"
+      ],
+      "pair_id": "pair-4"
+    },
+    {
+      "id": "b-5",
+      "campus": "校区B",
+      "category": "校队",
+      "name": "示例·校区B篮球队",
+      "logo": "img/b-5-logo.svg",
+      "cover": "img/b-5-cover.svg",
+      "summary": "这是一个示例校队，一句话简介占位。",
+      "description": "示例·篮球队（校区B）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "未招新",
+      "recruit_start": "",
+      "recruit_deadline": "",
+      "apply_url": "https://example.com/apply",
+      "apply_qr": "",
+      "contact": {
+        "wechat": "demo_b-5",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/b-5-p1.svg",
+        "img/b-5-p2.svg",
+        "img/b-5-p3.svg"
+      ],
+      "pair_id": "pair-5"
+    },
+    {
+      "id": "b-6",
+      "campus": "校区B",
+      "category": "其他",
+      "name": "示例·校区B志愿者协会",
+      "logo": "img/b-6-logo.svg",
+      "cover": "img/b-6-cover.svg",
+      "summary": "这是一个示例其他，一句话简介占位。",
+      "description": "示例·志愿者协会（校区B）的详细介绍占位文字。这里写组织的定位、日常活动、往届成果和对新成员的期待。所有内容均为演示用虚构数据。",
+      "recruit_status": "招新中",
+      "recruit_start": "2026-09-01",
+      "recruit_deadline": "2026-11-15",
+      "apply_url": "",
+      "apply_qr": "img/b-6-qr.svg",
+      "contact": {
+        "wechat": "demo_b-6",
+        "qq": "10000000"
+      },
+      "video": "",
+      "photos": [
+        "img/b-6-p1.svg",
+        "img/b-6-p2.svg",
+        "img/b-6-p3.svg"
+      ],
+      "pair_id": null
+    }
+  ]
+}
