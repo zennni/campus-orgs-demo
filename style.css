@@ -116,3 +116,4 @@ html,body{overflow-x:clip;max-width:100%}
 .hero2{background:radial-gradient(circle at 105% -10%,transparent 0 58px,rgba(255,255,255,.14) 59px 61px,transparent 62px 92px,rgba(255,255,255,.12) 93px 95px,transparent 96px 130px,rgba(255,255,255,.1) 131px 133px,transparent 134px),linear-gradient(160deg,#c8202a,#8e0d14)!important}
 .brand{color:#b5121b!important}
 .tag:not(.off){color:#b5121b!important;background:#fdecec!important}
+.cats i{background:#fdf0f0}
