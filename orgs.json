@@ -12,7 +12,11 @@
   }
  ],
  "categories": [
-  "社团"
+  "学术",
+  "体育",
+  "文艺",
+  "实践",
+  "公益"
  ],
  "source": {
   "text": "立信团委 2023–2024 学年社团年审公示",
@@ -22,7 +26,7 @@
   {
    "id": "sh-01",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "青年马克思主义研究会",
    "logo": "img/sh-01-logo.svg",
    "cover": "img/sh-01-cover.svg",
@@ -41,7 +45,7 @@
   {
    "id": "sh-02",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "新进社",
    "logo": "img/sh-02-logo.svg",
    "cover": "img/sh-02-cover.svg",
@@ -60,7 +64,7 @@
   {
    "id": "sh-03",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "模拟政协学生社团",
    "logo": "img/sh-03-logo.svg",
    "cover": "img/sh-03-cover.svg",
@@ -79,7 +83,7 @@
   {
    "id": "sh-04",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "公益",
    "name": "大学生平安志愿者行动队",
    "logo": "img/sh-04-logo.svg",
    "cover": "img/sh-04-cover.svg",
@@ -98,7 +102,7 @@
   {
    "id": "sh-05",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "实践",
    "name": "创客协会",
    "logo": "img/sh-05-logo.svg",
    "cover": "img/sh-05-cover.svg",
@@ -117,7 +121,7 @@
   {
    "id": "sh-06",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "实践",
    "name": "ERP沙盘协会",
    "logo": "img/sh-06-logo.svg",
    "cover": "img/sh-06-cover.svg",
@@ -136,7 +140,7 @@
   {
    "id": "sh-07",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "立信读书社",
    "logo": "img/sh-07-logo.svg",
    "cover": "img/sh-07-cover.svg",
@@ -155,7 +159,7 @@
   {
    "id": "sh-08",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "文艺",
    "name": "金典吉他社",
    "logo": "img/sh-08-logo.svg",
    "cover": "img/sh-08-cover.svg",
@@ -174,7 +178,7 @@
   {
    "id": "sh-09",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "文艺",
    "name": "ONS街舞社",
    "logo": "img/sh-09-logo.svg",
    "cover": "img/sh-09-cover.svg",
@@ -193,7 +197,7 @@
   {
    "id": "sh-10",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "演讲与口才协会",
    "logo": "img/sh-10-logo.svg",
    "cover": "img/sh-10-cover.svg",
@@ -212,7 +216,7 @@
   {
    "id": "sh-11",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "未来之星研习社",
    "logo": "img/sh-11-logo.svg",
    "cover": "img/sh-11-cover.svg",
@@ -231,7 +235,7 @@
   {
    "id": "sh-12",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "实践",
    "name": "未来金融家协会",
    "logo": "img/sh-12-logo.svg",
    "cover": "img/sh-12-cover.svg",
@@ -250,7 +254,7 @@
   {
    "id": "sh-13",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "体育",
    "name": "臻元台球协会",
    "logo": "img/sh-13-logo.svg",
    "cover": "img/sh-13-cover.svg",
@@ -269,7 +273,7 @@
   {
    "id": "sh-14",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "体育",
    "name": "棋艺社",
    "logo": "img/sh-14-logo.svg",
    "cover": "img/sh-14-cover.svg",
@@ -288,7 +292,7 @@
   {
    "id": "sh-15",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "模拟联合国协会",
    "logo": "img/sh-15-logo.svg",
    "cover": "img/sh-15-cover.svg",
@@ -307,7 +311,7 @@
   {
    "id": "sh-16",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "体育",
    "name": "排球协会",
    "logo": "img/sh-16-logo.svg",
    "cover": "img/sh-16-cover.svg",
@@ -326,7 +330,7 @@
   {
    "id": "sh-17",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "体育",
    "name": "自行车协会",
    "logo": "img/sh-17-logo.svg",
    "cover": "img/sh-17-cover.svg",
@@ -345,7 +349,7 @@
   {
    "id": "sh-18",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "数学建模协会",
    "logo": "img/sh-18-logo.svg",
    "cover": "img/sh-18-cover.svg",
@@ -364,7 +368,7 @@
   {
    "id": "sh-19",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "统计建模协会",
    "logo": "img/sh-19-logo.svg",
    "cover": "img/sh-19-cover.svg",
@@ -383,7 +387,7 @@
   {
    "id": "sh-20",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "文艺",
    "name": "传奇魔术社",
    "logo": "img/sh-20-logo.svg",
    "cover": "img/sh-20-cover.svg",
@@ -402,7 +406,7 @@
   {
    "id": "sh-21",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "实践",
    "name": "大学生职业能力发展协会CTP",
    "logo": "img/sh-21-logo.svg",
    "cover": "img/sh-21-cover.svg",
@@ -421,7 +425,7 @@
   {
    "id": "sh-22",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "体育",
    "name": "电竞社",
    "logo": "img/sh-22-logo.svg",
    "cover": "img/sh-22-cover.svg",
@@ -440,7 +444,7 @@
   {
    "id": "sh-23",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "文艺",
    "name": "超负荷动漫协会",
    "logo": "img/sh-23-logo.svg",
    "cover": "img/sh-23-cover.svg",
@@ -459,7 +463,7 @@
   {
    "id": "sh-24",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "文艺",
    "name": "KPOP协会",
    "logo": "img/sh-24-logo.svg",
    "cover": "img/sh-24-cover.svg",
@@ -478,7 +482,7 @@
   {
    "id": "sh-25",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "精算协会",
    "logo": "img/sh-25-logo.svg",
    "cover": "img/sh-25-cover.svg",
@@ -497,7 +501,7 @@
   {
    "id": "sh-26",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "法鼎协会",
    "logo": "img/sh-26-logo.svg",
    "cover": "img/sh-26-cover.svg",
@@ -516,7 +520,7 @@
   {
    "id": "sh-27",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "文艺",
    "name": "摄影协会",
    "logo": "img/sh-27-logo.svg",
    "cover": "img/sh-27-cover.svg",
@@ -535,7 +539,7 @@
   {
    "id": "sh-28",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "公益",
    "name": "社工协会",
    "logo": "img/sh-28-logo.svg",
    "cover": "img/sh-28-cover.svg",
@@ -554,7 +558,7 @@
   {
    "id": "sh-29",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "校辩论队",
    "logo": "img/sh-29-logo.svg",
    "cover": "img/sh-29-cover.svg",
@@ -573,7 +577,7 @@
   {
    "id": "sh-30",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "文艺",
    "name": "艺术设计协会",
    "logo": "img/sh-30-logo.svg",
    "cover": "img/sh-30-cover.svg",
@@ -592,7 +596,7 @@
   {
    "id": "sh-31",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "文艺",
    "name": "美术协会",
    "logo": "img/sh-31-logo.svg",
    "cover": "img/sh-31-cover.svg",
@@ -611,7 +615,7 @@
   {
    "id": "sh-32",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "文艺",
    "name": "振鹭传统文化社",
    "logo": "img/sh-32-logo.svg",
    "cover": "img/sh-32-cover.svg",
@@ -630,7 +634,7 @@
   {
    "id": "sh-33",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "文艺",
    "name": "书画协会",
    "logo": "img/sh-33-logo.svg",
    "cover": "img/sh-33-cover.svg",
@@ -649,7 +653,7 @@
   {
    "id": "sh-34",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "“人民城市”研习社",
    "logo": "img/sh-34-logo.svg",
    "cover": "img/sh-34-cover.svg",
@@ -668,7 +672,7 @@
   {
    "id": "sh-35",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "体育",
    "name": "翱翼羽社",
    "logo": "img/sh-35-logo.svg",
    "cover": "img/sh-35-cover.svg",
@@ -687,7 +691,7 @@
   {
    "id": "sh-36",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "体育",
    "name": "乒乓球协会",
    "logo": "img/sh-36-logo.svg",
    "cover": "img/sh-36-cover.svg",
@@ -706,7 +710,7 @@
   {
    "id": "sh-37",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "体育",
    "name": "健身塑形协会",
    "logo": "img/sh-37-logo.svg",
    "cover": "img/sh-37-cover.svg",
@@ -725,7 +729,7 @@
   {
    "id": "sh-38",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "体育",
    "name": "击剑社",
    "logo": "img/sh-38-logo.svg",
    "cover": "img/sh-38-cover.svg",
@@ -744,7 +748,7 @@
   {
    "id": "sh-39",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "体育",
    "name": "华蕴武道",
    "logo": "img/sh-39-logo.svg",
    "cover": "img/sh-39-cover.svg",
@@ -763,7 +767,7 @@
   {
    "id": "sh-40",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "上海立信会计金融学院咨询学会",
    "logo": "img/sh-40-logo.svg",
    "cover": "img/sh-40-cover.svg",
@@ -782,7 +786,7 @@
   {
    "id": "sh-41",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "实践",
    "name": "信保创想社Allinsure",
    "logo": "img/sh-41-logo.svg",
    "cover": "img/sh-41-cover.svg",
@@ -801,7 +805,7 @@
   {
    "id": "we-01",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "学术",
    "name": "青年马克思主义研究会",
    "logo": "img/we-01-logo.svg",
    "cover": "img/we-01-cover.svg",
@@ -820,7 +824,7 @@
   {
    "id": "we-02",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "实践",
    "name": "大学生职业发展协会",
    "logo": "img/we-02-logo.svg",
    "cover": "img/we-02-cover.svg",
@@ -839,7 +843,7 @@
   {
    "id": "we-03",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "文艺",
    "name": "立信吉他社",
    "logo": "img/we-03-logo.svg",
    "cover": "img/we-03-cover.svg",
@@ -858,7 +862,7 @@
   {
    "id": "we-04",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "文艺",
    "name": "Eagle街舞社",
    "logo": "img/we-04-logo.svg",
    "cover": "img/we-04-cover.svg",
@@ -877,7 +881,7 @@
   {
    "id": "we-05",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "文艺",
    "name": "长歌汉文化社",
    "logo": "img/we-05-logo.svg",
    "cover": "img/we-05-cover.svg",
@@ -896,7 +900,7 @@
   {
    "id": "we-06",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "桌面竞技社",
    "logo": "img/we-06-logo.svg",
    "cover": "img/we-06-cover.svg",
@@ -915,7 +919,7 @@
   {
    "id": "we-07",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "文艺",
    "name": "XD动漫社",
    "logo": "img/we-07-logo.svg",
    "cover": "img/we-07-cover.svg",
@@ -934,7 +938,7 @@
   {
    "id": "we-08",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "文艺",
    "name": "刀笔油画社",
    "logo": "img/we-08-logo.svg",
    "cover": "img/we-08-cover.svg",
@@ -953,7 +957,7 @@
   {
    "id": "we-09",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "电竞社",
    "logo": "img/we-09-logo.svg",
    "cover": "img/we-09-cover.svg",
@@ -972,7 +976,7 @@
   {
    "id": "we-10",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "实践",
    "name": "ERP协会",
    "logo": "img/we-10-logo.svg",
    "cover": "img/we-10-cover.svg",
@@ -991,7 +995,7 @@
   {
    "id": "we-11",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "学术",
    "name": "立信天文社",
    "logo": "img/we-11-logo.svg",
    "cover": "img/we-11-cover.svg",
@@ -1010,7 +1014,7 @@
   {
    "id": "we-12",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "学术",
    "name": "财税学社",
    "logo": "img/we-12-logo.svg",
    "cover": "img/we-12-cover.svg",
@@ -1029,7 +1033,7 @@
   {
    "id": "we-13",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "实践",
    "name": "瞻远行政人协会",
    "logo": "img/we-13-logo.svg",
    "cover": "img/we-13-cover.svg",
@@ -1048,7 +1052,7 @@
   {
    "id": "we-14",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "学术",
    "name": "模拟联合国协会",
    "logo": "img/we-14-logo.svg",
    "cover": "img/we-14-cover.svg",
@@ -1067,7 +1071,7 @@
   {
    "id": "we-15",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "文艺",
    "name": "摄影社",
    "logo": "img/we-15-logo.svg",
    "cover": "img/we-15-cover.svg",
@@ -1086,7 +1090,7 @@
   {
    "id": "we-16",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "滑板社",
    "logo": "img/we-16-logo.svg",
    "cover": "img/we-16-cover.svg",
@@ -1105,7 +1109,7 @@
   {
    "id": "we-17",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "学术",
    "name": "英语演讲辩论社",
    "logo": "img/we-17-logo.svg",
    "cover": "img/we-17-cover.svg",
@@ -1124,7 +1128,7 @@
   {
    "id": "we-18",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "学术",
    "name": "匡言辩论社",
    "logo": "img/we-18-logo.svg",
    "cover": "img/we-18-cover.svg",
@@ -1143,7 +1147,7 @@
   {
    "id": "we-19",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "文艺",
    "name": "书法协会",
    "logo": "img/we-19-logo.svg",
    "cover": "img/we-19-cover.svg",
@@ -1162,7 +1166,7 @@
   {
    "id": "we-20",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "文艺",
    "name": "青年剧社",
    "logo": "img/we-20-logo.svg",
    "cover": "img/we-20-cover.svg",
@@ -1181,7 +1185,7 @@
   {
    "id": "we-21",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "信跑社",
    "logo": "img/we-21-logo.svg",
    "cover": "img/we-21-cover.svg",
@@ -1200,7 +1204,7 @@
   {
    "id": "we-22",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "立信羽毛球协会",
    "logo": "img/we-22-logo.svg",
    "cover": "img/we-22-cover.svg",
@@ -1219,7 +1223,7 @@
   {
    "id": "we-23",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "自行车协会",
    "logo": "img/we-23-logo.svg",
    "cover": "img/we-23-cover.svg",
@@ -1238,7 +1242,7 @@
   {
    "id": "we-24",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "流云武术社",
    "logo": "img/we-24-logo.svg",
    "cover": "img/we-24-cover.svg",
@@ -1257,7 +1261,7 @@
   {
    "id": "we-25",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "鸣镝射艺社",
    "logo": "img/we-25-logo.svg",
    "cover": "img/we-25-cover.svg",
@@ -1276,7 +1280,7 @@
   {
    "id": "we-26",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "跆拳道社",
    "logo": "img/we-26-logo.svg",
    "cover": "img/we-26-cover.svg",
@@ -1295,7 +1299,7 @@
   {
    "id": "we-27",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "健美操社",
    "logo": "img/we-27-logo.svg",
    "cover": "img/we-27-cover.svg",
@@ -1314,7 +1318,7 @@
   {
    "id": "we-28",
    "campus": "wenxiang",
-   "category": "社团",
+   "category": "体育",
    "name": "松江回旋足球社",
    "logo": "img/we-28-logo.svg",
    "cover": "img/we-28-cover.svg",
@@ -1333,7 +1337,7 @@
   {
    "id": "sh-42",
    "campus": "shangchuan",
-   "category": "社团",
+   "category": "学术",
    "name": "智能金融协会FinInno",
    "logo": "img/sh-42-logo.svg",
    "cover": "img/sh-42-cover.svg",

@@ -3,7 +3,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const st={cat:'全部',q:''};
 const CN=id=>(DB.campuses.find(c=>c.id===id)||{}).name||id;
 const SUM=o=>o.summary?esc(o.summary):'<span class="ph">简介待补充</span>';
-const ICON={'学生会':'🏛️','学生发展中心':'🧭','社团':'🎯','艺术团':'🎭','校队':'🏀','其他':'✨'};
+const ICON={'学术':'📚','体育':'🏀','文艺':'🎭','实践':'🧭','公益':'💚','其他':'✨'};
 function home(){crumb.textContent='';const cid=st.hc||DB.campuses[0].id;const os=DB.orgs.filter(o=>o.campus===cid);const rec=os.filter(o=>o.recruit_status==='招新中');
 app.innerHTML=`<section class="hero2"><div class="h-kicker">新生必看 · 校园组织导航</div><h1>找到你想加入的组织</h1><p>上海立信会计金融学院 · 上川路、文翔路两校区社团一页看全</p>
 <div class="h-stats"><div><b>${DB.orgs.length}</b>个组织</div><div><b>${DB.orgs.filter(o=>o.recruit_status==='招新中').length}</b>正在招新</div><div><b>${DB.campuses.length}</b>个校区</div></div></section>
