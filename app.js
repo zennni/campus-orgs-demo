@@ -9,7 +9,7 @@ app.innerHTML=`<section class="hero2"><div class="h-kicker">新生必看 · 校�
 <div class="h-stats"><div><b>${DB.orgs.length}</b>个组织</div><div><b>${DB.orgs.filter(o=>o.recruit_status==='招新中').length}</b>正在招新</div><div><b>${DB.campuses.length}</b>个校区</div></div></section>
 <div class="seg2">${DB.campuses.map(c=>`<button data-h="${esc(c.id)}" class="${c.id===cid?'on':''}">${esc(c.name)}</button>`).join('')}</div>
 <h2 class="h2">按类别逛逛</h2><div class="cats">${DB.categories.map(k=>{const n=os.filter(o=>o.category===k).length;return `<a href="#/list/${encodeURIComponent(cid)}" data-k="${esc(k)}"><i>${ICON[k]||'📌'}</i><span>${esc(k)}</span><em>${n} 个</em></a>`}).join('')}</div>
-<h2 class="h2">正在招新 <small>${rec.length}</small></h2><div class="rail">${rec.map(o=>`<a class="rc" href="#/org/${encodeURIComponent(o.id)}"><img src="${esc(o.cover)}" alt=""><div><b>${esc(o.name)}</b><span>截止 ${esc(o.recruit_deadline||'待定')}</span></div></a>`).join('')||'<div class="empty">暂无</div>'}</div>
+${rec.length?`<h2 class="h2">正在招新 <small>${rec.length}</small></h2><div class="rail">${rec.map(o=>`<a class="rc" href="#/org/${encodeURIComponent(o.id)}"><img src="${esc(o.cover)}" alt=""><div><b>${esc(o.name)}</b><span>截止 ${esc(o.recruit_deadline||'待定')}</span></div></a>`).join('')}</div>`:''}
 <a class="all" href="#/list/${encodeURIComponent(cid)}">查看${esc(CN(cid))}全部组织 →</a>`;
 app.querySelectorAll('.seg2 button').forEach(b=>b.onclick=()=>{st.hc=b.dataset.h;home()});
 app.querySelectorAll('.cats a').forEach(a=>a.onclick=()=>{st.cat=a.dataset.k;st.q='';route.c=cid})}
