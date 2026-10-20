@@ -60,3 +60,44 @@ body{background:var(--bg);color:var(--ink)}
 .cta{}
 .btn-off{text-align:center;background:#eceef2;color:#8a91a2;border-radius:var(--r);padding:14px;margin-top:12px}
 main{padding-bottom:28px}
+/* ===== v2 追加：列表卡片/详情 tabs/底栏/动效 ===== */
+.banner{font-size:11px;padding:3px 8px;background:#fff7e0;color:#9a6b00;opacity:.9;letter-spacing:.5px}
+.top{position:sticky;top:0;z-index:20;backdrop-filter:saturate(1.6) blur(10px);-webkit-backdrop-filter:saturate(1.6) blur(10px);padding-top:max(env(safe-area-inset-top),0px)}
+main{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.search{font-size:16px!important}
+.tap{transition:transform .12s,box-shadow .2s;-webkit-tap-highlight-color:transparent}.tap:active{transform:scale(.97)}
+.card2{display:block;background:#fff;border-radius:var(--r);overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 2px 10px rgba(20,40,100,.06);margin-bottom:12px}
+.c2-cov{position:relative}.c2-cov>img:first-child{width:100%;aspect-ratio:21/9;object-fit:cover;display:block}
+.c2-logo{position:absolute;left:14px;bottom:-22px;width:52px;height:52px;border-radius:12px;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.c2-b{padding:28px 14px 14px}.c2-b h3{margin:0;font-size:16px}.c2-b p{margin:4px 0 8px;color:var(--sub);font-size:13px}
+.c2-m{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.cd{font-size:12px;color:#1a8a4a;background:#e9f8ef;border-radius:999px;padding:2px 8px}.cd.hot{color:#d0461f;background:#fff0ea}.cd.off{color:#8a91a2;background:#eceef2}
+.empty2{display:flex;flex-direction:column;align-items:center;gap:4px;padding:40px 0;color:var(--sub);font-size:13px}.empty2 b{color:var(--ink);font-size:15px;margin-top:6px}
+.dhero{overflow:hidden}.share{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(0,0,0,.35);color:#fff;display:grid;place-items:center;backdrop-filter:blur(6px)}
+.tabs{position:sticky;top:48px;z-index:10;display:flex;background:#fff;border-radius:var(--r);margin:12px 0 0;padding:4px;box-shadow:0 2px 10px rgba(20,40,100,.06)}
+.tabs button{flex:1;border:0;background:none;padding:10px;font-size:15px;color:var(--sub);position:relative;z-index:1}.tabs button.on{color:var(--acc);font-weight:700}
+.ink{position:absolute;left:4px;bottom:4px;width:calc((100% - 8px)/3);height:3px;transition:transform .25s}.ink::after{content:"";display:block;width:28px;height:3px;border-radius:3px;background:var(--acc);margin:auto}
+.pane{animation:fadeup .25s both}.kv{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f2f6}.kv span{color:var(--sub)}
+.tl{list-style:none;margin:6px 0 0;padding:0 0 0 22px;position:relative}.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:#e3e8f3}
+.tl li{position:relative;padding:0 0 16px}.tl li::before{content:"";position:absolute;left:-21px;top:3px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid #c9d5f5}
+.tl li.done::before{background:var(--acc);border-color:var(--acc)}.tl b{display:block;font-size:15px}.tl span{font-size:13px;color:var(--sub)}.tl-cd{margin-top:-4px}
+.none{color:var(--sub);padding:12px 0}.hint{font-size:12px;color:var(--sub);text-align:center;margin-top:8px}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:8px}.gal img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block}.gal img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+body.has-bar main{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+.abar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -4px 20px rgba(20,40,100,.08)}
+.abar .btn,.abar .btn-off{margin:0;max-width:640px;margin:auto;display:block;width:100%;box-sizing:border-box;text-align:center}
+.sheet-m{position:fixed;inset:0;z-index:50;background:rgba(10,20,40,0);transition:background .25s}.sheet-m.on{background:rgba(10,20,40,.45)}
+.sheet{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:20px 20px 0 0;padding:10px 20px calc(16px + env(safe-area-inset-bottom));text-align:center;transform:translateY(100%);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.sheet-m.on .sheet{transform:none}.grab{display:block;width:40px;height:4px;border-radius:4px;background:#dde2ec;margin:0 auto 10px}
+.qr2{width:200px;height:200px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08)}.sheet p{color:var(--sub);font-size:13px}
+.sbtn{width:100%;border:0;background:#f1f3f7;border-radius:12px;padding:12px;font-size:15px}
+.lb{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.92);display:grid;place-items:center;animation:fade .2s}.lb img{max-width:100%;max-height:80vh}
+.lb-n{position:absolute;bottom:calc(24px + env(safe-area-inset-bottom));color:#fff;font-size:13px}.lb-x{position:absolute;top:calc(12px + env(safe-area-inset-top));right:14px;font-size:30px;color:#fff;background:none;border:0}
+#toast{position:fixed;left:50%;bottom:120px;transform:translate(-50%,20px);background:rgba(20,25,40,.88);color:#fff;padding:9px 16px;border-radius:999px;font-size:14px;opacity:0;transition:.25s;z-index:70;pointer-events:none}#toast.on{opacity:1;transform:translate(-50%,0)}
+.skel .sk{border-radius:var(--r);margin-bottom:12px;background:linear-gradient(90deg,#e9edf4 25%,#f5f7fb 50%,#e9edf4 75%);background-size:300% 100%;animation:shim 1.2s infinite}
+.sk.h{height:180px}.sk.l{height:16px;width:70%}.sk.s{width:45%}.sk.c{height:110px}
+.in-f{animation:slidein .28s cubic-bezier(.2,.8,.2,1) both}.in-b{animation:slideback .28s cubic-bezier(.2,.8,.2,1) both}
+@keyframes slidein{from{opacity:0;transform:translateX(24px)}}@keyframes slideback{from{opacity:0;transform:translateX(-24px)}}
+@keyframes fadeup{from{opacity:0;transform:translateY(6px)}}@keyframes fade{from{opacity:0}}@keyframes shim{to{background-position:-150% 0}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media (min-width:700px){.abar .btn,.abar .btn-off{max-width:560px}}
