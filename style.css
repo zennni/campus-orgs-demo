@@ -126,3 +126,4 @@ body.has-bar .foot{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media(max-width:420px){.cats{grid-template-columns:repeat(5,minmax(0,1fr))}.cats span{font-size:16px}.cats a{padding-left:8px}}
 .dhero .tcov.cover span{visibility:hidden}.ccards b{font-size:17px}
+.chips .chip.on{background:#b5121b;border-color:#b5121b;color:#fff}
