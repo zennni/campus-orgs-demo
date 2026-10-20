@@ -20,9 +20,9 @@ ${rec.length?`${SH('02','正在招新',rec.length+' 个')}<div class="rail">${re
 ${SH(rec.length?'03':'02','校园风貌','点击查看大图')}<div class="fengmao">${GAL.map((g,k)=>`<figure><img class="tap" data-k="${k}" src="${g[0]}" alt="${esc(g[1])}" loading="lazy">${g[2]?`<figcaption>${g[2]}</figcaption>`:''}</figure>`).join('')}</div>`;
 app.querySelectorAll('.fengmao img').forEach(i=>i.onclick=()=>lightbox(GAL.map(g=>g[0]),+i.dataset.k));
 clearInterval(home.t);let hk=0;home.t=setInterval(()=>{const im=app.querySelectorAll('.phero img');if(!im.length)return clearInterval(home.t);im[hk].classList.remove('on');hk=(hk+1)%im.length;im[hk].classList.add('on')},5000);
-app.querySelectorAll('.ccards button').forEach(b=>b.onclick=()=>{st.hc=b.dataset.h;home()});
+app.querySelectorAll('.ccards button').forEach(b=>b.onclick=()=>{const id=b.dataset.h;st.hc=id;location.hash='#/list/'+encodeURIComponent(id)});
 app.querySelectorAll('.cats a').forEach(a=>a.onclick=()=>{st.cat=a.dataset.k;st.q='';route.c=cid})}
-function list(campus){crumb.textContent='/ '+CN(campus);const cats=['全部',...DB.categories];
+function list(campus){st.hc=campus;crumb.textContent='/ '+CN(campus);const cats=['全部',...DB.categories];
 app.innerHTML=`<div class="lhead"><div class="kicker">Directory · ${esc(CLAB[campus]||campus)}</div><h1>${esc(CN(campus))}</h1><p class="subline">${DB.orgs.filter(o=>o.campus===campus).length} 个组织 · ${esc((DB.campuses.find(c=>c.id===campus)||{}).desc||'')}</p></div><figure class="lphoto"><img src="${esc(CAMPIMG[campus]||'img/photos/jwfm_202010200346012.jpg')}" alt="${esc(CN(campus))}"></figure><div class="chips">${cats.map(c=>`<button class="chip${c===st.cat?' on':''}" data-c="${esc(c)}">${esc(c)}</button>`).join('')}</div>
 <input class="search" type="search" placeholder="搜索组织名称或简介" value="${esc(st.q)}"><div class="grid"></div>`;
 const grid=app.querySelector('.grid');
