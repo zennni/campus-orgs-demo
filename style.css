@@ -23,7 +23,7 @@ main{max-width:960px;margin:0 auto;padding:16px}
 .qr{display:block;width:180px;margin:12px auto 0}.photos{display:grid;grid-template-columns:1fr 1fr;gap:8px}.photos img{width:100%;border-radius:8px;aspect-ratio:3/2;object-fit:cover}
 video{width:100%;border-radius:10px}
 /* 设计 v1 视觉令牌（覆盖在上方基础样式之后） */
-:root{--acc:#2f6bff;--bg:#f5f5f7;--ink:#1d1d1f;--sub:#6e6e73;--r:14px}
+:root{--acc:#b5121b;--bg:#f5f5f7;--ink:#1d1d1f;--sub:#6e6e73;--r:14px}
 body{background:var(--bg);color:var(--ink)}
 .brand{color:var(--acc)}
 .campus a{background:var(--acc);border-radius:var(--r)}.campus a:nth-child(2){background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px #e3e5ea}
@@ -38,7 +38,7 @@ body{background:var(--bg);color:var(--ink)}
 /* 未招新报名占位 */
 .btn-off{display:block;text-align:center;background:#eceef2;color:#8a91a2;border-radius:var(--r,14px);padding:14px;font-size:15px;margin-top:12px;width:100%;cursor:not-allowed}
 /* 设计 v2：首页与详情加厚 */
-.hero2{margin:-16px -16px 0;padding:28px 20px 56px;background:radial-gradient(120% 80% at 100% 0,#7a5af8 0,transparent 60%),linear-gradient(160deg,#2f6bff,#1e47c8);color:#fff}
+.hero2{margin:-16px -16px 0;padding:28px 20px 56px;background:radial-gradient(120% 80% at 100% 0,#7a5af8 0,transparent 60%),linear-gradient(160deg,#b5121b,#1e47c8);color:#fff}
 .hero2 h1{font-size:26px;margin:6px 0 4px;letter-spacing:.5px}.hero2 p{margin:0;opacity:.85;font-size:14px}
 .h-kicker{display:inline-block;font-size:12px;padding:2px 10px;border-radius:999px;background:rgba(255,255,255,.18)}
 .h-stats{display:flex;gap:10px;margin-top:18px}.h-stats div{flex:1;background:rgba(255,255,255,.14);border-radius:12px;padding:10px;font-size:12px;opacity:.95}.h-stats b{display:block;font-size:22px}
@@ -102,7 +102,7 @@ body.has-bar main{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media (min-width:700px){.abar .btn,.abar .btn-off{max-width:560px}}
 
-#crumb a{color:var(--c,#2f6bff);text-decoration:none;font-weight:500}
+#crumb a{color:var(--c,#b5121b);text-decoration:none;font-weight:500}
 
 /* 真数据：占位文字与页脚 */
 .ph{color:#a0a6b2}.foot{text-align:center;font-size:12px;color:#8a8f99;padding:20px 16px 90px}.foot a{color:var(--acc);text-decoration:none}
@@ -111,3 +111,8 @@ body.has-bar main{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 html,body{overflow-x:clip;max-width:100%}
 /* 动画结束后不保留 transform，否则 .abar 的 fixed 会相对 main 定位 */
 .in-f,.in-b{animation-fill-mode:backwards}
+/* 主色：立信红 #b5121b（暂定，学校未公布官方色值） */
+:root{--acc:#b5121b}
+.hero2{background:radial-gradient(circle at 105% -10%,transparent 0 58px,rgba(255,255,255,.14) 59px 61px,transparent 62px 92px,rgba(255,255,255,.12) 93px 95px,transparent 96px 130px,rgba(255,255,255,.1) 131px 133px,transparent 134px),linear-gradient(160deg,#c8202a,#8e0d14)!important}
+.brand{color:#b5121b!important}
+.tag:not(.off){color:#b5121b!important;background:#fdecec!important}
