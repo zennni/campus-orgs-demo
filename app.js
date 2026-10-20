@@ -23,7 +23,7 @@ clearInterval(home.t);let hk=0;home.t=setInterval(()=>{const im=app.querySelecto
 app.querySelectorAll('.ccards button').forEach(b=>b.onclick=()=>{st.hc=b.dataset.h;home()});
 app.querySelectorAll('.cats a').forEach(a=>a.onclick=()=>{st.cat=a.dataset.k;st.q='';route.c=cid})}
 function list(campus){crumb.textContent='/ '+CN(campus);const cats=['全部',...DB.categories];
-app.innerHTML=`<div class="lhead"><div class="kicker">Directory · ${esc(CLAB[campus]||campus)}</div><h1>${esc(CN(campus))}</h1><p class="subline">${DB.orgs.filter(o=>o.campus===campus).length} 个组织 · ${esc((DB.campuses.find(c=>c.id===campus)||{}).desc||'')}</p></div><figure class="lphoto"><img src="img/photos/jwfm_202010200346012.jpg" alt="立信校园"></figure><div class="chips">${cats.map(c=>`<button class="chip${c===st.cat?' on':''}" data-c="${esc(c)}">${esc(c)}</button>`).join('')}</div>
+app.innerHTML=`<div class="lhead"><div class="kicker">Directory · ${esc(CLAB[campus]||campus)}</div><h1>${esc(CN(campus))}</h1><p class="subline">${DB.orgs.filter(o=>o.campus===campus).length} 个组织 · ${esc((DB.campuses.find(c=>c.id===campus)||{}).desc||'')}</p></div><figure class="lphoto"><img src="${esc(CAMPIMG[campus]||'img/photos/jwfm_202010200346012.jpg')}" alt="${esc(CN(campus))}"></figure><div class="chips">${cats.map(c=>`<button class="chip${c===st.cat?' on':''}" data-c="${esc(c)}">${esc(c)}</button>`).join('')}</div>
 <input class="search" type="search" placeholder="搜索组织名称或简介" value="${esc(st.q)}"><div class="grid"></div>`;
 const grid=app.querySelector('.grid');
 const draw=()=>{const q=st.q.trim().toLowerCase();const r=DB.orgs.filter(o=>o.campus===campus&&(st.cat==='全部'||o.category===st.cat)&&(!q||(o.name+o.summary).toLowerCase().includes(q)));

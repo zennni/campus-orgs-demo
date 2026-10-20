@@ -289,3 +289,4 @@ body.has-bar .foot{padding-bottom:calc(104px + env(safe-area-inset-bottom))}
   .c2-cov{width:64px;height:64px}
   .card2 .tcov b{font-size:21px}
 }
+.card2 .tcov b{color:#9A9285}
