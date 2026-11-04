@@ -1,6 +1,30 @@
 
 const QKEY='lixin_admin_queue_v1';
 const OKEY='lixin_admin_orgs_v1';
+const LIVE='lixin_browse_live_v1';
+function liveList(){try{const a=JSON.parse(localStorage.getItem(LIVE)||'[]');return Array.isArray(a)?a:[]}catch{return[]}}
+function setLive(a){localStorage.setItem(LIVE,JSON.stringify(a))}
+function campusId(s){const t=String(s||'');if(/文翔|松江|wenxiang/i.test(t)&&!/上川|浦东|shangchuan/i.test(t))return'wenxiang';return'shangchuan'}
+function toBrowse(item){
+  const p=item.payload||{},org=p.org||{},r=p.recruit||{},q=p.qr||{};
+  return{
+    id:item.id||'bm-lab',
+    name:org.name||item.name||'',
+    campus:campusId(org.campus),
+    category:org.category||'实践',
+    summary:org.summary||r.short||'',
+    description:r.long||org.summary||'',
+    cover:org.cover||'',logo:'',photos:[],video:'',pair_id:'',
+    recruit_status:r.on?'招新中':'暂未招新',
+    recruit_start:r.start||'',recruit_deadline:r.end||'',
+    apply_qr:q.main||'',apply_url:'',
+    contact:{wechat:r.contact||'',qq:''},
+    events:(p.events||[]).map(e=>({title:e.title||'',time:e.time||'',campus:e.campus||'',place:e.place||'',date:'',link:e.link||''})),
+    _fromReview:true
+  };
+}
+function upsertLive(org){const a=liveList();const i=a.findIndex(x=>x.id===org.id);if(i>=0)a[i]=org;else a.unshift(org);setLive(a)}
+function removeLive(id){setLive(liveList().filter(x=>x.id!==id))}
 const $=s=>document.querySelector(s);
 const crumb=t=>$('#crumb').textContent=t||'';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -71,18 +95,20 @@ function viewReview(i){
   <button class="btn ghost" id="back">返回队列</button>`;
   $('#back').onclick=()=>location.hash='#/';
   $('#ok').onclick=()=>{
-    // mark org live
+    // mark org live + bridge to browse overlay
     const od=JSON.parse(localStorage.getItem('lixin_org_demo_v1')||'{}');
     if(od){od.status='live';od.rejectReason='';localStorage.setItem('lixin_org_demo_v1',JSON.stringify(od))}
+    upsertLive(toBrowse(item));
     q.splice(i,1);setQueue(q);
     const lib=seedOrgs();const hit=lib.find(x=>x.id===item.id);if(hit){hit.on=true}else lib.unshift({id:item.id,name:item.name,category:p.org?.category||'实践',on:true,auth:true});
     localStorage.setItem(OKEY,JSON.stringify(lib));
-    toast('已通过');location.hash='#/';
+    toast('已过');location.hash='#/';
   };
   $('#rej').onclick=()=>{
     const r=$('#reason').value.trim();if(!r){toast('请填写驳回原因');return}
     const od=JSON.parse(localStorage.getItem('lixin_org_demo_v1')||'{}');
     if(od){od.status='reject';od.rejectReason=r;localStorage.setItem('lixin_org_demo_v1',JSON.stringify(od))}
+    removeLive(item.id);
     q.splice(i,1);setQueue(q);toast('已驳回');location.hash='#/';
   };
 }
@@ -92,6 +118,7 @@ function viewLibrary(){
   const lib=seedOrgs();
   const cats=['全部','学术','体育','文艺','实践','公益'];
   $('#app').innerHTML=`<div class="kicker">LIBRARY</div><h1 style="font-size:26px;margin:8px 0">组织库</h1>
+  <p class="note">旁注：「已授权 / 未授权」指入驻资格；与右侧「上架 / 下架」不是一回事。</p>
   <div class="row" style="flex-wrap:wrap;margin-bottom:8px" id="chips">${cats.map((c,i)=>`<button type="button" class="chip${i?'':' pending'}" data-c="${c}" style="cursor:pointer;background:none">${c}</button>`).join('')}</div>
   <div class="list" id="list"></div>
   <a class="btn ghost" href="#/">回待审</a>`;

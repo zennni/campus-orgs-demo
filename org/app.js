@@ -59,7 +59,7 @@ function viewHome(){
     <a href="#/qr">改扫码<div class="meta">主备码 · 过期 · 用途</div></a>
     <a href="#/status">提交 / 审核状态<div class="meta">${LABELS[DB.status]}</div></a>
   </div>
-  <a class="btn ghost" href="../#/org/sh-01" target="_blank" rel="noopener">预览浏览端样式（示意）</a>
+  <a class="btn ghost" href="../#/org/bm-lab" target="_blank" rel="noopener">预览浏览端（过审后可见）</a>
   <button class="btn ghost" id="out" style="margin-top:10px">退出登录</button>`;
   $('#out').onclick=()=>{DB.user=null;save(DB);location.hash='#/login'};
 }
@@ -89,7 +89,7 @@ function viewEvents(){
     <div class="row"><label class="field"><span>时间</span><input data-k="time" value="${esc(e.time)}"></label>
     <label class="field"><span>校区</span><input data-k="campus" value="${esc(e.campus)}"></label></div>
     <label class="field"><span>地点</span><input data-k="place" value="${esc(e.place)}"></label>
-    <label class="field"><span>报名链</span><input data-k="link" value="${esc(e.link)}"></label>
+    <label class="field"><span>报名链接</span><input data-k="link" value="${esc(e.link)}"></label>
     <button class="btn ghost rm" type="button">删除</button></div>`).join('');
   $('#app').innerHTML=`<div class="kicker">EVENTS</div><h1 style="font-size:24px;margin:8px 0">活动日历</h1>${rows||'<p class="note">暂无活动</p>'}
   <button class="btn ghost" id="add">+ 添加活动</button>
@@ -109,7 +109,7 @@ function viewEvents(){
 function viewQr(){
   crumb('/ 改扫码');const q=DB.qr;
   $('#app').innerHTML=`<div class="kicker">QR</div><h1 style="font-size:24px;margin:8px 0">扫码</h1>
-  <label class="field"><span>主码说明 / 占位 URL</span><input id="main" placeholder="上传后填图床地址" value="${esc(q.main)}"></label>
+  <label class="field"><span>主码图片地址</span><input id="main" placeholder="粘贴码图链接" value="${esc(q.main)}"></label>
   <label class="field"><span>备用码</span><input id="backup" value="${esc(q.backup)}"></label>
   <label class="field"><span>过期日</span><input id="ex" type="date" value="${esc(q.expire)}"></label>
   <label class="field"><span>用途标签</span><select id="tag"><option>招新群</option><option>面试</option><option>其他</option></select></label>
@@ -124,7 +124,7 @@ function viewStatus(){
   $('#app').innerHTML=`<div class="kicker">REVIEW</div><h1 style="font-size:24px;margin:8px 0">审核状态 ${chip(DB.status)}</h1>
   ${DB.status==='reject'&&DB.rejectReason?`<div class="warn">驳回原因：${esc(DB.rejectReason)}</div>`:''}
   <label class="field"><span>提交备注（可选）</span><textarea id="note">${esc(DB.note||'')}</textarea></label>
-  <p class="note">提交后进入后台待审队列；通过后状态变「已过」（演示不改浏览端 orgs.json）。</p>
+  <p class="note">提交后进入后台待审；通过后本页变「已过」，浏览端会立刻同步展示（同浏览器 localStorage，无真后端）。</p>
   <button class="btn" id="sub" ${DB.status==='pending'?'disabled':''}>${DB.status==='pending'?'已在待审':'提交审核'}</button>
   <button class="btn ghost" id="back">返回</button>`;
   $('#back').onclick=()=>location.hash='#/';
